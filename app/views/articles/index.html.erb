@@ -1,0 +1,9 @@
+<div class="navbar">
+  <p>Wikinimous</p>
+  <p><%= link_to "New Article", new_article_path %></p>
+</div>
+
+<% @articles.each do |a| %>
+<p><%= link_to a.title, article_path(a) %></p>
+<p><%= a.content %></p>
+<% end %>
